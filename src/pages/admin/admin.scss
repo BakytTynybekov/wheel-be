@@ -1,0 +1,20 @@
+.logout {
+  button {
+    background-color: red;
+    padding: 10px 20px;
+    display: block;
+    font-size: 20px;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+}
+
+.adminpage__inner {
+  padding: 100px 30px;
+}

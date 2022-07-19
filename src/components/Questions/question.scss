@@ -1,0 +1,132 @@
+.questions__inner {
+  width: 90%;
+  margin: auto;
+
+  h2 {
+    text-align: center;
+    font-size: 60px;
+  }
+}
+.tabs {
+  display: flex;
+  border-bottom: 1px solid rgba(119, 119, 119, 0.5);
+  margin: 20px 0;
+  padding: 40px 0 0;
+
+  &-mobile {
+    display: none;
+  }
+
+  button {
+    width: 100%;
+    display: block;
+    border: none;
+    background-color: inherit;
+    padding: 18px 10px;
+    font-size: 22px;
+    font-family: Montserrat;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #777;
+    transition: font-weight, color 0.3s ease;
+    cursor: pointer;
+  }
+
+  .active-btn {
+    color: black;
+    border-bottom: 1px solid #ff0000;
+  }
+}
+
+.panels {
+  text-align: center;
+  .question {
+    line-height: 18px;
+    font-size: 18px;
+    font-family: Montserrat;
+    border-bottom: 1px solid rgba(119, 119, 119, 0.5);
+    transition: 900ms ease-out;
+    color: #777;
+    padding: 20px 0 0 0;
+    overflow: hidden;
+
+    h3 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      font-size: 21px;
+      font-weight: 300;
+      margin: 0;
+      padding: 10px 0;
+      cursor: pointer;
+      line-height: 150%;
+    }
+
+    h3:hover {
+      .plus {
+        color: red;
+      }
+    }
+
+    p {
+      margin: 0;
+      font-size: 0;
+      transition: 100ms ease;
+    }
+
+    .plus {
+      display: inline-block;
+      color: black;
+      font-size: 50px;
+      transition: 100ms ease;
+    }
+  }
+
+  .activeQuestion {
+    p {
+      text-align: left;
+      font-size: 18px;
+      margin: 0px 0 20px;
+      line-height: 150%;
+      word-spacing: 5px;
+      padding: 20px 0;
+    }
+
+    h3 {
+      .plus {
+        transform: rotateZ(-45deg);
+      }
+    }
+  }
+
+  &-btn {
+    margin-top: 50px;
+    text-align: center;
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 60px;
+    font-size: 23px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    line-height: 60px;
+    font-family: Montserrat;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #questions {
+    .tabs-mobile {
+      display: block;
+      font-size: 25px;
+      margin-bottom: 30px;
+    }
+
+    .tabs {
+      display: none;
+    }
+  }
+}

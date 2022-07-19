@@ -1,0 +1,172 @@
+.ordersPage {
+  h1 {
+    text-align: center;
+    margin: 40px;
+    font-size: 50px;
+  }
+
+  .tabs {
+    margin-bottom: 70px;
+  }
+}
+
+.ordersExtra-infoOk {
+  margin: 30px 0;
+  padding: 30px;
+  border: 3px solid green !important;
+}
+
+.ordersExtra-info {
+  margin: 30px 0;
+  padding: 30px;
+  border: 2px solid red;
+}
+
+.ordersExtra-btn {
+  display: block;
+  background-color: red;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 40px;
+  color: white;
+  margin: 30px 0;
+  font-size: 22px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: black;
+  }
+}
+
+.orders {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+
+  h1 {
+    text-align: center;
+  }
+
+  &-item {
+    width: 500px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding: 10px 30px;
+
+    p {
+      vertical-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(119, 119, 119, 0.1);
+      margin: 20px;
+    }
+  }
+}
+
+.orders-btn {
+  text-align: center;
+  button {
+    background-color: inherit;
+    border: none;
+
+    span {
+      font-size: 50px;
+      color: green;
+      cursor: pointer;
+
+      &:hover {
+        color: black;
+      }
+    }
+
+    .x {
+      color: red;
+    }
+
+    .wait {
+      color: rgb(136, 85, 28);
+    }
+  }
+}
+
+.statusModal {
+  position: fixed;
+  place-items: center;
+  display: grid;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 10000;
+
+  &__inner {
+    width: 500px;
+    background-color: #fff;
+    padding: 30px 20px;
+
+    h1 {
+      margin: 0;
+      color: red;
+    }
+
+    form {
+      display: grid;
+      font-size: 20px;
+
+      label {
+        display: block;
+        text-align: left;
+        font-weight: bold;
+        margin: 40px 0 10px 0;
+      }
+
+      textarea,
+      input {
+        width: 100%;
+        display: block;
+        margin: 10px auto 0;
+        padding: 20px;
+        color: #000000;
+        border: 1px solid #c9c9c9;
+        border-radius: 5px;
+        background-color: transparent;
+        font-weight: normal;
+        font-size: 20px;
+      }
+      .statusModal-btn {
+        background-color: red;
+        padding: 20px 10px;
+        font-size: 20px;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 30px;
+        border-radius: 10px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: black;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .ordersPage {
+    .tabs-mobile {
+      display: block;
+      font-size: 25px;
+      margin-bottom: 50px;
+    }
+
+    .tabs {
+      display: none;
+    }
+  }
+}

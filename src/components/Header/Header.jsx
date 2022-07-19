@@ -1,21 +1,32 @@
-import { useState } from "react";
-import { Link } from "react-scroll";
+import { useContext, useState } from "react";
+import { Link, handleSetActive } from "react-scroll";
+import { GeneralAuthContext } from "../../context/GeneralContext";
 import "./header.scss";
 
-function Header() {
-  const [siderBar, setSideBar] = useState(false);
+function Header({ siderBar, setSideBar }) {
+  // const [siderBar, setSideBar] = useState(false);
   return (
     <header className="header">
       <div className="container">
         <div className="header__inner">
           <div className="logo">
-            <img
-              src="https://static.tildacdn.com/tild3661-6264-4535-a130-313133303532/photo.svg"
-              alt="logo"
-            />
+            <Link
+              activeClass="active"
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={-118}
+              duration={200}
+              className="menu-item-link "
+            >
+              <img
+                src="https://static.tildacdn.com/tild3661-6264-4535-a130-313133303532/photo.svg"
+                alt="logo"
+              />
+            </Link>
           </div>
 
-          <nav>
+          <nav onClick={(e) => e.stopPropagation()}>
             <div className="bars" onClick={() => setSideBar(!siderBar)}>
               <i class="fa-solid fa-bars"></i>
             </div>
@@ -36,36 +47,52 @@ function Header() {
                     spy={true}
                     smooth={true}
                     offset={-118}
-                    duration={100}
+                    duration={200}
                     className="menu-item-link "
                   >
                     О подписке
                   </Link>
                 </li>
                 <li className="menu-item">
-                  <a href="" className="menu-item-link">
+                  <Link
+                    activeClass="active"
+                    to="devices"
+                    spy={true}
+                    smooth={true}
+                    offset={-118}
+                    duration={200}
+                    className="menu-item-link "
+                  >
                     Наши девайсы
-                  </a>
+                  </Link>
                 </li>
+
                 <li className="menu-item">
-                  <a href="" className="menu-item-link">
-                    Преимущества
-                  </a>
-                </li>
-                <li className="menu-item">
-                  <a href="" className="menu-item-link">
+                  <Link
+                    activeClass="active"
+                    to="delivery"
+                    spy={true}
+                    smooth={true}
+                    offset={-118}
+                    duration={200}
+                    className="menu-item-link"
+                  >
                     Доставка
-                  </a>
+                  </Link>
                 </li>
+
                 <li className="menu-item">
-                  <a href="" className="menu-item-link">
-                    О нас
-                  </a>
-                </li>
-                <li className="menu-item">
-                  <a href="" className="menu-item-link">
-                    Частые вопросы
-                  </a>
+                  <Link
+                    activeClass="active"
+                    to="questions"
+                    spy={true}
+                    smooth={true}
+                    offset={-118}
+                    duration={200}
+                    className="menu-item-link "
+                  >
+                    Частые вопросы{" "}
+                  </Link>
                 </li>
               </ul>
               <div className="menu-info">

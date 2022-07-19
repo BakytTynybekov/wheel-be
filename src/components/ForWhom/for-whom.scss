@@ -1,0 +1,23 @@
+.forWhom {
+  h2 {
+    font-size: 50px;
+  }
+  &__panels {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    overflow: auto;
+    gap: 40px;
+
+    &-item {
+      margin: 60px 0;
+      min-width: 350px;
+      padding: 30px 20px;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 247, 5, 1) 11%,
+        rgba(255, 255, 255, 1) 88%
+      );
+      border-radius: 20px;
+    }
+  }
+}
