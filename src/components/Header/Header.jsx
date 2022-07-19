@@ -1,10 +1,7 @@
-import { useContext, useState } from "react";
-import { Link, handleSetActive } from "react-scroll";
-import { GeneralAuthContext } from "../../context/GeneralContext";
+import { Link } from "react-scroll";
 import "./header.scss";
 
 function Header({ siderBar, setSideBar }) {
-  // const [siderBar, setSideBar] = useState(false);
   return (
     <header className="header">
       <div className="container">

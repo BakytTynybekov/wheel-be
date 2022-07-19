@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useContext } from "react";
 import { useState } from "react";
 import { GeneralFirestoreContext } from "../../context/GeneralFirestore";

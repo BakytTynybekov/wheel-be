@@ -1,5 +1,4 @@
 import { Fade } from "react-reveal";
-import { Element } from "react-scroll";
 import { dataSubs } from "./dataSubs";
 import "./subscription.scss";
 

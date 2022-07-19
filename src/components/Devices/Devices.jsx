@@ -1,14 +1,11 @@
 import "./devices.scss";
-import { useState } from "react";
-import Modal from "./Modal";
-import { devicesData } from "./data";
+
 import Device from "./Device";
 import { useEffect } from "react";
 import { useContext } from "react";
 import { GeneralFirestoreContext } from "../../context/GeneralFirestore";
 
 function Devices() {
-  const [modalIsOpen, setIsOpen] = useState(false);
   const { getAllDevices, allDevices } = useContext(GeneralFirestoreContext);
   useEffect(() => {
     getAllDevices();
