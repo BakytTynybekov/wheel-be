@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { dataForWhom } from "./dataForWhom";
 import "./for-whom.scss";
+import "../Questions/question.scss";
 
 const options = [
   { value: "electroSamokaty", label: "Электросамокаты" },

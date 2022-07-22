@@ -1,112 +1,28 @@
-.for-business {
-  margin: 70px 0;
-  padding: 20px;
-  h1 {
-    width: 70%;
-    font-size: 45px;
-    text-align: left;
-    letter-spacing: 3px;
-    margin: 70px 0;
-
-    span {
-      background-color: #fcef2b;
-      border-radius: 20px;
-      padding: 0 10px 15px;
-    }
+.forWhom {
+  h2 {
+    font-size: 40px;
+    margin: 0;
   }
-
-  &__inner {
+  &__panels {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: center;
-    gap: 40px;
-  }
+    grid-template-columns: repeat(4, 1fr);
+    overflow: auto;
+    gap: 25px;
 
-  &-item {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 30px;
-    border-radius: 20px;
-    background-color: black;
-    color: white;
-    h3 {
-      font-size: 25px;
-    }
-
-    p {
-      font-size: 17px;
-    }
-
-    button {
-      background-color: inherit;
-      border: none;
-      margin: 20px 0;
-
-      a {
-        border-radius: 20px;
-        padding: 15px 30px;
-        cursor: pointer;
-        border: 3px solid white;
-        color: white;
-        font-size: 15px;
-        font-weight: bold;
-
-        &:hover {
-          background-color: #fcef2b;
-          color: black;
-        }
-      }
-    }
-
-    img {
-      display: block;
-      width: 80%;
-      margin: 20px auto 0;
-    }
-  }
-
-  .courrier {
-    color: black;
-    background-color: #fcef2b;
-
-    a {
-      border: 3px solid black;
-      color: black;
-
-      &:hover {
-        background-color: black;
-        color: white;
-      }
-    }
-  }
-}
-
-@media screen and(max-width: 1000px) {
-  .for-business {
-    h1 {
-      width: 95%;
-      font-size: 50px;
-    }
-    &__inner {
-      grid-template-columns: 1fr;
-    }
-  }
-}
-
-@media screen and(max-width: 600px) {
-  .for-business {
-    .business-image,
-    .courrier-image {
-      display: none;
-    }
-    h1 {
-      font-size: 40px;
-    }
     &-item {
-      grid-template-columns: 1fr;
-      padding-bottom: 20px;
+      margin: 20px 0;
+      min-width: 270px;
+      vertical-align: start;
+      padding: 30px 20px;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 247, 5, 1) 11%,
+        rgba(255, 255, 255, 1) 88%
+      );
+      border-radius: 20px;
+
+      img {
+      }
     }
   }
 }
