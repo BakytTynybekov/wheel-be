@@ -1,5 +1,5 @@
 .devices {
-  padding: 30px;
+  padding: 70px;
   position: relative;
 
   &__inner {
@@ -17,25 +17,26 @@
   h3 {
     margin: 0;
     margin-bottom: 70px;
-    font-size: 40px;
+    font-size: 35px;
   }
 
   &-item {
-    padding: 20px;
+    padding: 15px;
     border-radius: 25px;
     background-color: #f8f8f8;
-    max-width: 450px;
+    max-width: 300px;
 
     h4 {
-      font-size: 28px;
+      font-size: 20px;
       margin: 10px;
     }
     img {
-      width: 100%;
+      width: 90%;
+      margin: auto;
     }
 
     .price {
-      font-size: 16px;
+      font-size: 14px;
       color: grey;
       font-family: "Montserrat", Arial, sans-serif;
       position: relative;
@@ -45,7 +46,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 10px;
-      margin-top: 20px;
+      margin-top: 10px;
     }
 
     &-price {
@@ -55,7 +56,7 @@
       padding: 10px;
       border-radius: 10px;
       position: relative;
-      font-size: 18px;
+      font-size: 15px;
     }
 
     &-order {
@@ -63,14 +64,14 @@
       grid-template-columns: 3fr 1fr;
       gap: 10px;
       width: 100%;
-      margin: 30px 0;
+      margin: 20px 0;
 
       button {
         display: block;
-        padding: 10px 20px;
+        padding: 5px 20px;
         border-radius: 15px;
         border: none;
-        font-size: 18px;
+        font-size: 17px;
         font-weight: bold;
         cursor: pointer;
 
@@ -87,7 +88,7 @@
 
       .more-details {
         background-color: #fff;
-        font-size: 35px;
+        font-size: 25px;
       }
     }
   }

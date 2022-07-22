@@ -35,7 +35,7 @@ function Orders() {
 
   useEffect(() => {
     getFilteredOrders();
-  }, [allOrders, selectedOption]);
+  }, [selectedOption]);
 
   useEffect(() => {
     getAllOrders();

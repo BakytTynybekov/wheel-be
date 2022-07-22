@@ -31,7 +31,6 @@ function OrderModal({ status, setState, data, id }) {
         .toDate()
         .toLocaleString("ru", { timeZone: "UTC" }),
     };
-    console.log(data);
     updateOrder(data, id, data);
     setState(false);
   };

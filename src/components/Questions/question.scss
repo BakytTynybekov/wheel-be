@@ -4,14 +4,15 @@
 
   h2 {
     text-align: center;
-    font-size: 60px;
+    font-size: 50px;
+    margin: 30px;
   }
 }
 .tabs {
   display: flex;
   border-bottom: 1px solid rgba(119, 119, 119, 0.5);
   margin: 20px 0;
-  padding: 40px 0 0;
+  padding: 10px 0 0;
 
   &-mobile {
     display: none;
@@ -23,7 +24,7 @@
     border: none;
     background-color: inherit;
     padding: 18px 10px;
-    font-size: 22px;
+    font-size: 16px;
     font-family: Montserrat;
     font-weight: 500;
     text-transform: uppercase;
@@ -42,7 +43,7 @@
   text-align: center;
   .question {
     line-height: 18px;
-    font-size: 18px;
+    font-size: 15px;
     font-family: Montserrat;
     border-bottom: 1px solid rgba(119, 119, 119, 0.5);
     transition: 900ms ease-out;
@@ -55,7 +56,7 @@
       justify-content: space-between;
       align-items: center;
       gap: 20px;
-      font-size: 21px;
+      font-size: 18px;
       font-weight: 300;
       margin: 0;
       padding: 10px 0;
@@ -78,7 +79,7 @@
     .plus {
       display: inline-block;
       color: black;
-      font-size: 50px;
+      font-size: 40px;
       transition: 100ms ease;
     }
   }
@@ -86,7 +87,7 @@
   .activeQuestion {
     p {
       text-align: left;
-      font-size: 18px;
+      font-size: 14px;
       margin: 0px 0 20px;
       line-height: 150%;
       word-spacing: 5px;
@@ -101,16 +102,15 @@
   }
 
   &-btn {
-    margin-top: 50px;
+    margin-top: 30px;
     text-align: center;
     background-color: black;
     border: none;
     color: white;
-    padding: 15px 60px;
-    font-size: 23px;
+    padding: 20px 40px;
+    font-size: 18px;
     text-transform: uppercase;
     border-radius: 10px;
-    line-height: 60px;
     font-family: Montserrat;
     font-weight: bold;
     cursor: pointer;
@@ -121,7 +121,7 @@
   #questions {
     .tabs-mobile {
       display: block;
-      font-size: 25px;
+      font-size: 20px;
       margin-bottom: 30px;
     }
 

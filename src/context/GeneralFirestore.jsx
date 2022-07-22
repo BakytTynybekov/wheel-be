@@ -47,9 +47,9 @@ export const GeneralFirestoreProvider = ({ children }) => {
     );
   };
 
-  onSnapshot(doc(fireStoreApp.fireStore, "orders", "name"), (doc) => {
-    getAllOrders();
-  });
+  // onSnapshot(doc(fireStoreApp.fireStore, "orders", "name"), (doc) => {
+  //   getAllOrders();
+  // });
 
   const updateOrder = (data, id, newData) => {
     const refToDoc = doc(fireStoreApp.fireStore, "orders", id);
