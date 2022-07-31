@@ -1,21 +1,27 @@
+import { Modal } from "@mui/material";
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import FormModal from "./FormModal";
-import Modal from "./Modal";
+import MyModal from "./Modal";
+
 import "./modal.scss";
 
 function Device({ device }) {
   const [detailsModal, setDetailsModal] = useState(false);
-  const [formModal, setFormModal] = useState(false);
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
 
-  useEffect(() => {
-    if (detailsModal || formModal) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-  });
+  const handleCloseDetailsModal = () => setDetailsModal(false);
+  const handleOpenDetailsModal = () => setDetailsModal(true);
+  // useEffect(() => {
+  //   if (detailsModal || formModal) {
+  //     document.body.style.overflow = "hidden";
+  //   } else {
+  //     document.body.style.overflow = "auto";
+  //   }
+  // });
 
   return (
     <div className="devices-item">
@@ -37,33 +43,32 @@ function Device({ device }) {
         </div>
       </div>
       <div className="devices-item-order">
-        <button className="order" onClick={() => setFormModal(!formModal)}>
+        <button className="order" onClick={handleOpen}>
           Забронировать
         </button>
-        <button
-          className="more-details"
-          onClick={() => setDetailsModal(!detailsModal)}
-        >
+        <button className="more-details" onClick={handleOpenDetailsModal}>
           <span>
             <i class="fa-solid fa-gear"></i>
           </span>
         </button>
-        {detailsModal && (
-          <div className="detailsModal" onClick={() => setDetailsModal(false)}>
-            <Modal
-              detailsModal={detailsModal}
-              setDetailsModal={setDetailsModal}
+        <div className="modal-container">
+          <Modal
+            className="detailsModal"
+            open={detailsModal}
+            onClose={handleCloseDetailsModal}
+          >
+            <MyModal
+              handleClose={handleCloseDetailsModal}
               details={device.details}
               image={device.img}
               title={device.title}
             />
-          </div>
-        )}
-        {formModal && (
-          <div onClick={() => setFormModal(false)} className="formModal">
-            <FormModal setFormModal={setFormModal} device={device} />
-          </div>
-        )}
+          </Modal>
+
+          <Modal open={open} onClose={handleClose} className="formModal">
+            <FormModal setFormModal={handleClose} device={device} />
+          </Modal>
+        </div>
       </div>
     </div>
   );

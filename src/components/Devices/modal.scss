@@ -1,28 +1,24 @@
 .detailsModal,
 .formModal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 100000;
-  overflow: hidden;
   display: grid;
   place-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 .modal__content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
   width: 80%;
-  max-width: 1200px;
-  height: 80vh;
+  max-width: 1000px;
+  height: 90vh;
   padding: 70px 0;
-  overflow: auto;
   background-color: white;
+  overflow: auto;
   position: relative;
 
+  img {
+    width: 100%;
+  }
   h2 {
     color: black;
     opacity: 1;
@@ -42,21 +38,21 @@
 
     p {
       margin: 15px 0;
-      font-size: 20px;
+      font-size: 16px;
     }
 
     &-label {
-      font-size: 20px !important;
+      font-size: 17px;
     }
   }
 }
 
 .closeModal {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 10px;
+  right: 10px;
   margin: 2px 10px;
-  font-size: 50px;
+  font-size: 40px;
   cursor: pointer;
 
   &:hover {
@@ -64,7 +60,7 @@
   }
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 900px) {
   .modal__content {
     grid-template-columns: 1fr;
   }
@@ -72,8 +68,22 @@
   .image {
     img {
       display: block;
-      width: 80%;
+      width: 50%;
       margin: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .image {
+    img {
+      width: 70%;
+    }
+  }
+
+  .modal__content {
+    p {
+      font-size: 14px;
     }
   }
 }

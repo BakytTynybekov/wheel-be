@@ -1,10 +1,10 @@
 import React from "react";
 import "./modal.scss";
 
-function Modal({ setDetailsModal, details, title, image }) {
+function MyModal({ handleClose, details, title, image }) {
   return (
     <div className="modal__content" onClick={(e) => e.stopPropagation()}>
-      <div className="closeModal" onClick={() => setDetailsModal(false)}>
+      <div className="closeModal" onClick={handleClose}>
         <span>
           <i class="fa-solid fa-circle-xmark"></i>{" "}
         </span>
@@ -30,4 +30,4 @@ function Modal({ setDetailsModal, details, title, image }) {
   );
 }
 
-export default Modal;
+export default MyModal;

@@ -9,7 +9,6 @@ function Devices() {
   const { getAllDevices, allDevices } = useContext(GeneralFirestoreContext);
   useEffect(() => {
     getAllDevices();
-    console.log(allDevices);
   }, []);
 
   return (
