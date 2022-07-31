@@ -39,6 +39,7 @@ function Header({ siderBar, setSideBar }) {
               <ul className="menu">
                 <li className="menu-item">
                   <Link
+                    onClick={() => setSideBar(false)}
                     activeClass="active"
                     to="about-subscription"
                     spy={true}
@@ -52,6 +53,7 @@ function Header({ siderBar, setSideBar }) {
                 </li>
                 <li className="menu-item">
                   <Link
+                    onClick={() => setSideBar(false)}
                     activeClass="active"
                     to="devices"
                     spy={true}
@@ -66,6 +68,7 @@ function Header({ siderBar, setSideBar }) {
 
                 <li className="menu-item">
                   <Link
+                    onClick={() => setSideBar(false)}
                     activeClass="active"
                     to="delivery"
                     spy={true}
@@ -80,6 +83,7 @@ function Header({ siderBar, setSideBar }) {
 
                 <li className="menu-item">
                   <Link
+                    onClick={() => setSideBar(false)}
                     activeClass="active"
                     to="questions"
                     spy={true}
