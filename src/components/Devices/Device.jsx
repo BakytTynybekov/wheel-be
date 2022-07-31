@@ -1,6 +1,5 @@
 import { Modal } from "@mui/material";
 import React from "react";
-import { useEffect } from "react";
 import { useState } from "react";
 import FormModal from "./FormModal";
 import MyModal from "./Modal";
@@ -15,13 +14,6 @@ function Device({ device }) {
 
   const handleCloseDetailsModal = () => setDetailsModal(false);
   const handleOpenDetailsModal = () => setDetailsModal(true);
-  // useEffect(() => {
-  //   if (detailsModal || formModal) {
-  //     document.body.style.overflow = "hidden";
-  //   } else {
-  //     document.body.style.overflow = "auto";
-  //   }
-  // });
 
   return (
     <div className="devices-item">
